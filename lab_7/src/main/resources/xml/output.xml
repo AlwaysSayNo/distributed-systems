@@ -1,0 +1,9 @@
+<department xmlns="http://www.grynko.nazar/study/department" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.grynko.nazar/study/department schema.xsd">
+<group id="0" subject="Mathematica"/>
+<group id="1" subject="English">
+<student dateOfBirth="22.02.2003" firstName="Nazar" id="6" lastName="Gray"/>
+<student dateOfBirth="19.12.2002" firstName="Nick" id="7" lastName="Black"/>
+<student dateOfBirth="01.05.2002" firstName="James" id="4" lastName="Brown"/>
+<student dateOfBirth="12.11.2002" firstName="Robert" id="5" lastName="Purple"/>
+</group>
+</department>
