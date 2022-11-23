@@ -11,7 +11,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 @Controller
-public class FrontController {
+public class ServerFrontController {
 
     private final Socket socket;
     private final ObjectInputStream in;
@@ -19,7 +19,7 @@ public class FrontController {
     private RequestProcessor requestProcessor;
 
 /*    @SneakyThrows
-    public FrontController(ServerSocket serverSocket) {
+    public ServerFrontController(ServerSocket serverSocket) {
         this.socket = serverSocket.accept();
         this.in = new ObjectInputStream(socket.getInputStream());
         this.out = new ObjectOutputStream(socket.getOutputStream());
@@ -27,7 +27,7 @@ public class FrontController {
 
 
     @SneakyThrows
-    public FrontController(ServerSocket serverSocket) {
+    public ServerFrontController(ServerSocket serverSocket) {
         this.socket = null;// serverSocket.accept();
         this.in = null; //new ObjectInputStream(socket.getInputStream());
         this.out =  null; //new ObjectOutputStream(socket.getOutputStream());
