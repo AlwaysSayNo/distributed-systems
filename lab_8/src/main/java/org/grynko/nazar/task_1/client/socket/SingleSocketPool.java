@@ -39,7 +39,7 @@ public class SingleSocketPool {
     @SneakyThrows
     @PreDestroy
     private void destroy() {
-        System.out.println("Client#SingleSocketPool#PreDestroy");
+        System.out.println("==> Client#SingleSocketPool#PreDestroy");
         closeSocket();
     }
 

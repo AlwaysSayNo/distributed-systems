@@ -30,6 +30,7 @@ public class DBInitializer {
         System.out.println("==> Init db start");
         Connection connection = connectionPool.getConnection();
         ScriptRunner sr = new ScriptRunner(connection);
+        sr.setLogWriter(null);
 
         Reader createReader = new BufferedReader(new FileReader(createScript));
         sr.runScript(createReader);

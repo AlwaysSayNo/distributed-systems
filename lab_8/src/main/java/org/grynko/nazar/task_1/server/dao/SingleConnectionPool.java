@@ -36,7 +36,7 @@ public class SingleConnectionPool {
 
     @PreDestroy
     private void destroy() {
-        System.out.println("Client#SingleConnectionPool#PreDestroy");
+        System.out.println("==> Server#SingleConnectionPool#PreDestroy");
         closeConnection();
     }
 

@@ -26,14 +26,6 @@ public class ServerFrontController {
         this.requestProcessor = requestProcessor;
     }
 
-
-/*    @SneakyThrows
-    public ServerFrontController(ServerSocket serverSocket) {
-        this.socket = null;// serverSocket.accept();
-        this.in = null; //new ObjectInputStream(socket.getInputStream());
-        this.out =  null; //new ObjectOutputStream(socket.getOutputStream());
-    }*/
-
     public void process() {
         ParameterizedRequest request = receiveRequest();
 

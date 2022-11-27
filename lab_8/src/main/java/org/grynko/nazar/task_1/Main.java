@@ -35,6 +35,7 @@ public class Main {
         System.out.println(clientCode);
     }
 
+    @SneakyThrows
     private static void threadStart() {
         Thread serverThread = new Thread(() -> ServerMain.main(new String[]{}));
 
@@ -42,6 +43,9 @@ public class Main {
 
         serverThread.start();
         clientThread.start();
+
+        serverThread.join();
+        clientThread.join();
     }
 
 }

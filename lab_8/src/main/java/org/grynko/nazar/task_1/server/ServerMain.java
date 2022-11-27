@@ -22,7 +22,7 @@ public class ServerMain {
         }
         catch (Exception e) {
             //System.out.println("ServerMain#Exception: " + e);
-            e.printStackTrace();
+            //e.printStackTrace();
         }
 
         context.close();

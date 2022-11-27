@@ -1,15 +1,13 @@
-package org.grynko.nazar.task_1.client;
+package org.grynko.nazar.task_2.client;
 
-import org.grynko.nazar.task_1.client.cases.Cases;
-import org.grynko.nazar.task_1.client.config.ClientConfig;
-import org.grynko.nazar.task_1.client.controller.ClientFrontController;
+import org.grynko.nazar.task_2.client.cases.Cases;
+import org.grynko.nazar.task_2.client.controller.ClientFrontController;
+import org.grynko.nazar.task_2.client.config.ClientConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ClientMain {
 
     public static void main(String[] args) {
-        System.out.println("Start clientMain");
-
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(ClientConfig.class);
 
@@ -22,7 +20,7 @@ public class ClientMain {
     }
 
     private static void doOperation(ClientFrontController controller) {
-        Cases.case3(controller);
+        Cases.case2(controller);
     }
 
 }
