@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.Reader;
 import java.sql.Connection;
@@ -28,6 +27,7 @@ public class DBInitializer {
     @SneakyThrows
     @PostConstruct
     private void init() {
+        System.out.println("==> Init db start");
         Connection connection = connectionPool.getConnection();
         ScriptRunner sr = new ScriptRunner(connection);
 
@@ -38,6 +38,7 @@ public class DBInitializer {
         sr.runScript(insertReader);
 
         connectionPool.closeConnection();
+        System.out.println("==> Init db finish");
     }
 
 
