@@ -22,7 +22,7 @@ public class ClientMain {
     }
 
     private static void doOperation(ClientFrontController controller) {
-        Cases.case3(controller);
+        Cases.case7(controller);
     }
 
 }
