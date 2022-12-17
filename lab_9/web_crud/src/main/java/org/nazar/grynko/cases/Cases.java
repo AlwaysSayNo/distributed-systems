@@ -7,10 +7,13 @@ import org.nazar.grynko.common.model.Student;
 import org.nazar.grynko.common.request.ParameterizedRequest;
 import org.nazar.grynko.processor.RequestProcessor;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.InputStream;
+import java.util.*;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.stream.IntStream;
 
 public class Cases {
     
@@ -28,7 +31,11 @@ public class Cases {
 
         StringBuilder result = new StringBuilder();
 
-        groups.forEach(g -> result.append(g.toString()));
+        groups.forEach(
+                g -> {
+                    result.append(g.toString());
+                }
+        );
 
         return result.toString();
     }
@@ -53,8 +60,6 @@ public class Cases {
         Map<String, Object> responseParameters = requestProcessor.getResponse(request).getParameters();
 
         // output
-        Group resultGroup = (Group) responseParameters.get(GroupParamsConstants.GROUP.toString());
-
         return selectAllGroup();
     }
 
